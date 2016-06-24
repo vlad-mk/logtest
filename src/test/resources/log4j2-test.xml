@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+<!--        <Socket name="log4j2stash" host="localHost" port="7000">
+            <SerializedLayout />
+        </Socket>-->
+        <Gelf name="gelf" host="udp:localhost" port="12201" version="1.1" extractStackTrace="true"
+              filterStackTrace="true" mdcProfiling="true" includeFullMdc="true" maximumMessageSize="8192"
+              originHost="%host{fqdn}" additionalFieldTypes="fieldName1=String,fieldName2=Double,fieldName3=Long">
+            <Field name="timestamp" pattern="%d{dd MMM yyyy HH:mm:ss,SSS}" />
+            <Field name="level" pattern="%level" />
+            <Field name="simpleClassName" pattern="%C{1}" />
+            <Field name="className" pattern="%C" />
+            <Field name="server" pattern="%host" />
+            <Field name="server_fqdn" pattern="%host{fqdn}" />
+
+            <!-- This is a static field -->
+            <Field name="application" literal="mytest" />
+
+            <!-- This is a field using MDC -->
+            <Field name="mdcField2" mdc="mdcField2" />
+            <DynamicMdcFields regex="mdc.*" />
+            <DynamicMdcFields regex="(mdc|MDC)fields" />
+        </Gelf>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="gelf"/>
+        </Root>
+    </Loggers>
+</Configuration>
