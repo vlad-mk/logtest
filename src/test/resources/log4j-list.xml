@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="OFF" name="RoutingTest">
+
+    <Appenders>
+        <Console name="STDOUT">
+            <PatternLayout pattern="%m%n"/>
+        </Console>
+        <List name="List">
+            <!--<PatternLayout pattern="%C %M %m"/>-->
+            <PatternLayout pattern="%m"/>
+        </List>
+    </Appenders>
+
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="List"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

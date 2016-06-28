@@ -141,6 +141,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.6.1/daecf4cf267ad7c7f8aa477fc84d144ef04162f7/log4j-core-2.6.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: org.apache.logging.log4j:log4j-core:tests:2.6.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.6.1/4c19368459628a32541c04cb82c0e6c2c3645663/log4j-core-2.6.1-tests.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.6.1/daecf4cf267ad7c7f8aa477fc84d144ef04162f7/log4j-core-2.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.6.1">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.6.1/f473a40ee76f71f70bd123f9bc3acf572d9b288f/log4j-slf4j-impl-2.6.1.jar!/" />
